@@ -134,21 +134,6 @@ public class DishController {
         return R.success("修改成功");
     }
 
-//    /**
-//     * 根据条件查询对应菜品
-//     * @param dish
-//     * @return
-//     */
-//    @GetMapping("/list")
-//    public R<List<Dish>> list(Dish dish){
-//        LambdaQueryWrapper<Dish> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-//        lambdaQueryWrapper.eq(dish.getCategoryId() != null,Dish::getCategoryId,dish.getCategoryId());
-//        lambdaQueryWrapper.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
-//        lambdaQueryWrapper.eq(Dish::getStatus,1);
-//        List<Dish> list = dishService.list(lambdaQueryWrapper);
-//        return R.success(list);
-//    }
-
     /**
      * 根据条件查询对应菜品（口味）
      * @param dish
