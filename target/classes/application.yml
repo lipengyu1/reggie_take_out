@@ -11,12 +11,23 @@ spring:
       password: 123456
       mysql:
         usePingMethod: false
+  redis:
+    host: 192.168.43.85
+    port: 6379
+    password: 211021
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 4
+        min-idle: 0
+        max-wait: 10ms
   mail:
     host: smtp.qq.com
     # 发件人
     username: 1169424910@qq.com
     # 授权码
-    password: rnbtxlxupxwtibjf
+    password: vuxvieqljuozgdef
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
