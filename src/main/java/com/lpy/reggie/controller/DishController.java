@@ -46,6 +46,8 @@ public class DishController {
     public R<String> save(@RequestBody DishDto dishDto){
         log.info(dishDto.toString());
         dishService.saveWithFalvor(dishDto);
+        String key = "dish_"+ dishDto.getCategoryId()+"_"+dishDto.getStatus();
+        redisTemplate.delete(key);
         return R.success("新增菜品成功");
     }
 
@@ -108,9 +110,6 @@ public class DishController {
     public R<String> update(@RequestBody DishDto dishDto){
         log.info(dishDto.toString());
         dishService.updateWithFalvor(dishDto);
-//        //清理所有菜品缓存
-//        Set keys = redisTemplate.keys("dish_*");
-//        redisTemplate.delete(keys);
         //清理某个分类下面的菜品缓存数据
         String key = "dish_"+ dishDto.getCategoryId()+"_"+dishDto.getStatus();
         redisTemplate.delete(key);

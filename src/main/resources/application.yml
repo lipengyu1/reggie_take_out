@@ -22,6 +22,9 @@ spring:
         max-idle: 4
         min-idle: 0
         max-wait: 10ms
+  cache:
+    redis:
+      time-to-live: 1800000 # 设置缓存数据的更新时间
   mail:
     host: smtp.qq.com
     # 发件人

@@ -22,12 +22,15 @@ spring:
         max-idle: 4
         min-idle: 0
         max-wait: 10ms
+  cache:
+    redis:
+      time-to-live: 1800000 # 设置缓存数据的更新时间
   mail:
     host: smtp.qq.com
     # 发件人
     username: 1169424910@qq.com
     # 授权码
-    password: vuxvieqljuozgdef
+    password: vnbfgfdrmaqwgfad
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
