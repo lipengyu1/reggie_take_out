@@ -10,16 +10,16 @@ spring:
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.43.85:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://66.66.66.66:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
         username: root
-        password: 654321
+        password: 666666
       # 从数据源
       slave:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.43.47:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://66.66.66.66:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
         username: root
-        password: 654321
+        password: 666666
     masterslave:
       # 读写分离配置
       load-balance-algorithm-type: round_robin #轮询
@@ -35,9 +35,9 @@ spring:
   main:
     allow-bean-definition-overriding: true  # 后面创建数据源会覆盖前面创建的数据源
   redis:
-    host: 192.168.43.85
+    host: 66.66.66.66
     port: 6379
-    password: 211021
+    password: 666666
     database: 0
     jedis:
       pool:
@@ -51,9 +51,9 @@ spring:
   mail:
     host: smtp.qq.com
     # 发件人
-    username: 1169424910@qq.com
+    username: 1084334584@qq.com
     # 授权码
-    password: vnbfgfdrmaqwgfad
+    password: 666666
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
