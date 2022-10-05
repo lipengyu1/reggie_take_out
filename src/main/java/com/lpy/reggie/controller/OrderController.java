@@ -11,6 +11,7 @@ import com.lpy.reggie.entity.ShoppingCart;
 import com.lpy.reggie.service.OrderDetailService;
 import com.lpy.reggie.service.OrderService;
 import com.lpy.reggie.service.ShoppingCartService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
 @RestController
 @Slf4j
 @RequestMapping("/order")
+@Api(tags = "订单相关接口")
 public class OrderController {
     @Autowired
     private OrderService orderService;

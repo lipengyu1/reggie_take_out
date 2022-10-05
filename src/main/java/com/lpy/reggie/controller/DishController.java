@@ -10,6 +10,7 @@ import com.lpy.reggie.entity.DishFlavor;
 import com.lpy.reggie.service.Categoryservice;
 import com.lpy.reggie.service.DishFlavorService;
 import com.lpy.reggie.service.DishService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/dish")
 @Slf4j
+@Api(tags = "菜品相关接口")
 public class DishController {
     @Autowired
     private DishService dishService;
